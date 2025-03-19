@@ -17,9 +17,9 @@
 import { ref } from "vue";
 import Header from "./components/Header.vue";
 
-const description = ref("This is a description");
+const description = ref("This is a description.");
 const count = ref(0);
-const items = ref(["Item 1", "Item 2", "Item 3"]);
+const items = ref(["Pizza", "Burger", "Salad"]);
 </script>
 
 <style>
