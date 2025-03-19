@@ -1,0 +1,14 @@
+id: no-console-except-error
+language: typescript
+message: "No console.log allowed except console.error on the catch block"
+rule:
+  any:
+    - pattern: console.error($$$)
+      not:
+        inside:
+          kind: catch_clause
+          stopBy: end
+    - pattern: console.$METHOD($$$)
+constraints:
+  METHOD:
+    regex: "log|debug|warn"
