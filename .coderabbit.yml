@@ -1,0 +1,6 @@
+reviews:
+  tools:
+    ast-grep:
+      essential_rules: true # option to enable essential security rules
+      rule_dirs:
+        - "ast-grep-rules"
