@@ -1,20 +1,3 @@
-<template>
-  <header class="header">
-    <div class="header-content">
-      <h1 class="logo">{{ title }}</h1>
-      <nav class="nav">
-        <ul>
-          <li v-for="item in menuItems" :key="item.text">
-            <a href="#" @click.prevent="handleNavClick(item.text)">{{
-              item.text
-            }}</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</template>
-
 <script setup>
 import { ref } from "vue";
 
@@ -34,7 +17,24 @@ const handleNavClick = (text) => {
 };
 </script>
 
-<style scoped>
+<template>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">{{ title }}</h1>
+      <nav class="nav">
+        <ul>
+          <li v-for="item in menuItems" :key="item.text">
+            <a href="#" @click.prevent="handleNavClick(item.text)">{{
+              item.text
+            }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</template>
+
+<style>
 .header {
   background: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
