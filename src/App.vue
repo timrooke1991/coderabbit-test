@@ -4,7 +4,7 @@
       <Header />
       <div class="content">
         <p>{{ description }}</p>
-        <button @click="count++">Clicked {{ count }} times</button>
+        <button @click="handleClick">Clicked {{ count }} times</button>
         <ul>
           <li v-for="item in items" :key="item">{{ item }}</li>
         </ul>
@@ -20,6 +20,17 @@ import Header from "./components/Header.vue";
 const description = ref("This is a description");
 const count = ref(0);
 const items = ref(["Item 1", "Item 2", "Item 3"]);
+
+function handleClick() {
+  try {
+    description.value = "You clicked me";
+    items.value = ["Item 4", "Item 5", "Item 6"];
+    count.value++;
+    console.log(count.value);
+  } catch (error) {
+    console.error(error);
+  }
+}
 </script>
 
 <style>
