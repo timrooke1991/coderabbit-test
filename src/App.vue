@@ -3,7 +3,7 @@
     <main class="container">
       <Header />
       <div class="content">
-        <p>{{ description }}</p>
+        <Description :content="description" />
         <button @click="count++">Clicked {{ count }} times</button>
         <ul>
           <li v-for="item in items" :key="item">{{ item }}</li>
@@ -16,7 +16,7 @@
 <script setup>
 import { ref } from "vue";
 import Header from "./components/Header.vue";
-
+import Description from "./components/Description.vue";
 const description = ref("This is a description");
 const count = ref(0);
 const items = ref(["Item 1", "Item 2", "Item 3"]);
