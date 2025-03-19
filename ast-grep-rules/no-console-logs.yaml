@@ -1,5 +1,5 @@
 id: no-console-except-error
-language: typescript
+language: javascript
 message: "No console.log allowed except console.error on the catch block"
 rule:
   any:

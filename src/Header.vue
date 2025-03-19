@@ -26,7 +26,11 @@ const menuItems = ref([
 ]);
 
 const handleNavClick = (text) => {
-  console.log(`Clicked: ${text}`);
+  try {
+    console.log(`Clicked: ${text}`);
+  } catch (error) {
+    console.error(error);
+  }
 };
 </script>
 
